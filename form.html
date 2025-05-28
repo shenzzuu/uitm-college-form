@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UiTM College Application Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/explore.css">
+  <script src="script/form.js" defer></script>
+  <script src="script/nav.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo-link">
+        <img src="pics/logo.png" alt="UiTM Logo" class="logo-img" />
+        <h1 class="logo-text">College Form</h1>
+      </a>
+  
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">☰</button>
+  
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="form.html">Form</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<div class="scroll-banner">
+  <div class="scroll-text">College Application Form • Academic Session 2025/2026 - Universiti Teknologi MARA</div>
+</div><br><br>
+  <p class="tagline"><em>"Dengan Ilmu, Membina Masa Depan"</em></p>
+  <main>
+    <form id="kolejForm" enctype="multipart/form-data">
+      <legend>Please fill the form below with valid information.</legend><br>
+      <fieldset>
+        <legend>Student Information</legend>
+
+        <label>Student Name:
+          <input type="text" id="nama" required />
+          <span class="error-message"></span>
+        </label>
+
+        <label>Matric No.:
+          <input type="text" id="matrik" required />
+          <span class="error-message"></span>
+        </label>
+
+        <label>Program / Course:
+          <input type="text" id="kursus" required />
+          <span class="error-message"></span>
+        </label>
+
+        <label>Part (Semester):
+          <input type="text" id="bahagian" required />
+          <span class="error-message"></span>
+        </label>
+
+        <label>Religion:
+          <select id="agama" required>
+            <option value="">-- Sila Pilih --</option>
+            <option value="Islam">Islam</option>
+            <option value="Kristian">Kristian</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Buddha">Buddha</option>
+            <option value="Other">Lain-lain</option>
+          </select>
+        </label>
+
+        <label>Phone Number:
+          <input type="tel" id="telefon" required />
+          <span class="error-message"></span>
+        </label>
+
+        <label>Address:
+          <textarea id="alamat" rows="3" required></textarea>
+        </label>
+
+        <label>Entrance Date:
+          <input type="date" id="tarikhMasuk" required />
+        </label>
+
+        <label>Exit Date:
+          <input type="date" id="tarikhKeluar" required />
+          <span class="error-message"></span>
+        </label>
+
+        <label>Please upload your student photo:
+          <input type="file" id="foto" accept="image/*" required />
+          <span class="error-message"></span>
+        </label>
+
+        <label class="checkbox-confirmation-label">
+          <input type="checkbox" class="checkbox-confirmation-input" required>
+            I confirm that all information provided are true and accurate.
+        </label>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+  </main>
+  <a href="#" class="back-to-top" title="Back to top">Back To Top</a>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="pics/logo.png" alt="UiTM Logo" style="width: 100px;" />
+        <h3>Universiti Teknologi MARA (UiTM)</h3>
+        <p>Empowering Future Leaders</p>
+      </div>
+  
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>
+          <a href="https://maps.app.goo.gl/PDqbvx6Uh9kZcGjWA" target="_blank">
+            📍 UiTM Arau, 02600 Perlis, Malaysia
+          </a>
+        </p>
+        <p>📞 <a href="tel:+6011-61538600">+6011-6153 8600</a></p>
+        <p>
+          ✉️ <a href="mailto:hafizrafi@staff.uitm.edu.my">hafizrafi@staff.uitm.edu.my</a>
+        </p>
+      </div>
+  
+      <div class="footer-hours">
+        <h3>Office Hours</h3>
+        <p>Mon - Thurs: 8:00 AM - 5:00 PM</p>
+        <p>Friday: 8:00 AM - 12:15 PM, 2:45 PM - 5:00 PM</p>
+        <p>Closed on weekends & public holidays</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <h3>Let's Connect</h3>
+      <p>If you have questions or ideas, feel free to reach out!</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/uitmperlis_official/?hl=en" target="_blank"><i
+            class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://wa.me/601161538600" target="_blank"><i class="fab fa-whatsapp fa-lg"></i></a>
+        <a href="https://www.youtube.com/c/UiTMChannel" target="_blank">
+          <i class="fab fa-youtube fa-lg"></i>
+        </a>
+      </div>
+      <small>&copy; 2025 Muhammad Hafiz Bin Mohd Rafi. All rights reserved.</small>
+    </div>
+  </footer>
+<script>
+  const backToTop = document.querySelector('.back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+
+  backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+#explore-us {
+  padding: 60px 0;
+  background-color: #fafafa;
+}
+
+.explore-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.explore-header h2 {
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.explore-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.explore-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.explore-card {
+  background-color: white;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-5px);
+}
+
+.explore-card img {
+  width: 100%;
+  height: auto;
+}
+
+.explore-content {
+  padding: 20px;
+}
+
+.explore-content h3 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.explore-content p {
+  font-size: 14px;
+  color: #333;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--uitm-blue);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  display: none;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: var(--uitm-violet);
+}
+
+.checkbox-confirmation-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  line-height: 1.5;
+  margin-top: 1em;
+}
+
+.checkbox-confirmation-input {
+  margin: 0;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  header .logo-img,
+  #successMessage,
+  #successMessage * {
+    visibility: visible;
+  }
+
+  header,
+  #successMessage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  #successMessage th {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    font-weight: bold;
+    color: black;
+    text-align: justify;
+    padding-left: 5px;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  @page {
+    margin: 20mm;
+  }
+}
